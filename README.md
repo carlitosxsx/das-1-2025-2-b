@@ -22,7 +22,7 @@ Pilar da POO que oculta e protege as informações do código, exemplo métodos 
 
 > "Maximize a coesão das classes e minimize o acoplamento entre elas."
 
-## Coesão 
+## Coesão
 Toda classe deve ter uma única responsabilidade, ou seja, um código que deve realizar uma tarefa bem feita. Isso possibilita algumas vantagens:
 - Facilitar a implementação;
 - Facilitar a alocação de um único recurso para manter a classe;
@@ -32,5 +32,33 @@ Toda classe deve ter uma única responsabilidade, ou seja, um código que deve r
 
 Força de conexão entre duas classes. Diz-se uma classe fortemente acoplável aquela que fica "amarrada" a outra, ou seja, remover um simples método de uma classe associada a outra pode gerar erros na outra classe, enquanto uma baixamente acoplável é adaptátvel, como um cabo USB.
 
+# Aula 4 - 07/08/2025
+
 ## SOLID
-- **S**ingle Responsability 
+
+### Princípio da Responsabilidade Única (**S**)
+
+Esse princípio é uma aplicação direta da ideia de coesão.
+
+Entity <-- Dados
+Repository <-- JPA spring data
+Services <-- Lógica(use cases)
+Controller <-- Api rest
+
+Seta de Herança - Seta com ponta vazada (aberta) e linha contínua
+Seta de Variável - Seta com ponta fechada e linha contínua
+Seta de Interface - Seta com ponta vazada (aberta) e linha tracejada
+Seta de Associação - Seta com ponta fechada e linha tracejada
+
+### Príncio da Segregação de Interface (**I**)
+
+Esse princípio está diretamente relacionado à ideia de coesão, mas com foco específico na definição de responsabilidades das interfaces. Em outras palavras, cada interface deve ser projetada para atender exclusivamente às necessidades de uma entidade ou funcionalidade específica.
+
+No exemplo apresentado em aula, foi desenvolvida uma interface gráfica utilizando a biblioteca Swing do Java, que realiza duas ações distintas:
+
+- Exibir uma janela modal com uma mensagem na tela
+- Registrar e exibir os movimentos do mouse
+
+Embora ambas as ações estejam dentro do mesmo contexto visual, a separação das responsabilidades é clara. Cada tipo de evento é tratado por uma interface específica, o que reforça a aplicação do princípio da segregação.
+
+Essa abordagem evita que uma única interface assuma múltiplas responsabilidades, tornando o sistema mais modular, compreensível e fácil de manter.
