@@ -79,10 +79,12 @@ Herança expoe para subclasses detalhes de implementação das classes pai, o qu
 Herança só deve ser utilizada caso as subclasses são uma divisão exata (uma substituição). Exemplo:
 
 ![alt text](image.png)
-\Um gato não pode se tornar um cachorro
+\
+Um gato não pode se tornar um cachorro
 
 ![alt text](image-1.png)
-\Um funcionário pode se tornar um cliente.
+\
+Um funcionário pode se tornar um cliente.
 
 ### Princípio de Demeter
 
