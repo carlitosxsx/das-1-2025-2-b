@@ -72,14 +72,30 @@ Os controladores devem estabeler dependências prioritaramente com as interfaces
 
 Tal princípio atua na redução do acoplamento.
 
-## Prefira Composição a Herança
+### Prefira Composição a Herança
 
 Herança expoe para subclasses detalhes de implementação das classes pai, o que viola o princípio do encapsulamento em POO, por isso, é preferível o uso de composições (associações)
 
 Herança só deve ser utilizada caso as subclasses são uma divisão exata (uma substituição). Exemplo:
 
 ![alt text](image.png)
-Um gato não pode se tornar um cachorro
+\Um gato não pode se tornar um cachorro
 
 ![alt text](image-1.png)
-Um funcionário pode se tornar um cliente.
+\Um funcionário pode se tornar um cliente.
+
+### Princípio de Demeter
+
+A implementação de um método deve chamar apenas os seguintes outros métodos:
+
+- CASO 1: de sua própria classe;
+- CASO 2: de objetos passados como parâmetros;
+- CASO 3: de objetos criados pelo próprio método;
+- CASO 4: de atributos da classe do método.
+
+O exemplo utilizado na aula para representar o uso do princípio, foi o da criação da janela utilizando a biblioteca Swing, onde o construtor Janelinha() atende as definições acima.
+
+
+### Principio de Aberto/Fechado
+
+Uma classe deve estar fechada para modificações e aberta para extensões.
