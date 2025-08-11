@@ -59,6 +59,27 @@ No exemplo apresentado em aula, foi desenvolvida uma interface gráfica utilizan
 - Exibir uma janela modal com uma mensagem na tela
 - Registrar e exibir os movimentos do mouse
 
-Embora ambas as ações estejam dentro do mesmo contexto visual, a separação das responsabilidades é clara. Cada tipo de evento é tratado por uma interface específica, o que reforça a aplicação do princípio da segregação.
+Embora ambas as ações estejam dentro do mesmo contexto visual, a separação das responsabilidades é clara. Cada tipo de evento é tratado por uma interface específica.
 
-Essa abordagem evita que uma única interface assuma múltiplas responsabilidades, tornando o sistema mais modular, compreensível e fácil de manter.
+# Aula 5 - 11/08/2025
+
+### Príncio da Inversão de Dependências (**D**)
+
+> "Prefira Interfaces a Classes"
+
+Exemplo levando em consideração a disciplina de fábrica de software:
+Os controladores devem estabeler dependências prioritaramente com as interfaces de serviço e não com as implementações de serviço concretas.
+
+Tal princípio atua na redução do acoplamento.
+
+## Prefira Composição a Herança
+
+Herança expoe para subclasses detalhes de implementação das classes pai, o que viola o princípio do encapsulamento em POO, por isso, é preferível o uso de composições (associações)
+
+Herança só deve ser utilizada caso as subclasses são uma divisão exata (uma substituição). Exemplo:
+
+![alt text](image.png)
+Um gato não pode se tornar um cachorro
+
+![alt text](image-1.png)
+Um funcionário pode se tornar um cliente.
