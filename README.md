@@ -113,3 +113,13 @@ O exemplo utilizado na aula para representar o uso do princípio, foi o da manip
 Herança define uma relação é-um entre objetos de uma classe base e objetos de subclasses.
 Quando se tem uma herança, subclasses precisam dos mesmos métodos que o pai.
 Substitui um filho por outro, sem ter perda.
+
+## DESIGN PATTERNS
+
+Padrões de projeto para desenvolvimento de software, podem ser de criação, estruturais ou comportamentais.
+
+### Singleton
+
+Padrão de criação que permite garantir que uma classe tenha apenas uma instância, ao mesmo tempo em que fornece um ponto de acesso global a essa instância.
+
+Variáveis estáticas, únicas e globais. 
