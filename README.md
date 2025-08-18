@@ -97,9 +97,19 @@ A implementação de um método deve chamar apenas os seguintes outros métodos:
 
 O exemplo utilizado na aula para representar o uso do princípio, foi o da criação da janela utilizando a biblioteca Swing, onde o construtor Janelinha() atende as definições acima.
 
+# Aula 6 - 14/08/2025
 
 ### Principio de Aberto/Fechado (**O**)
 
 Uma classe deve estar fechada para modificações e aberta para extensões.
 
+Classe Abstrata: pegar uma classe e misturar com uma interface (meio incompleta).
+Isso significa projetá-la de forma a permitir novas funcionalidades sem alterar seu código, usando recursos como herança, funções lambda e padrões de projeto, garantindo flexibilidade e adaptabilidade.
+
 O exemplo utilizado na aula para representar o uso do princípio, foi o da manipulação das propriedades de uma tabela utilizando a biblioteca JFRAME.
+
+### Princípio de Substituição de Liskov (**L**)
+
+Herança define uma relação é-um entre objetos de uma classe base e objetos de subclasses.
+Quando se tem uma herança, subclasses precisam dos mesmos métodos que o pai.
+Substitui um filho por outro, sem ter perda.
