@@ -78,15 +78,15 @@ Herança expoe para subclasses detalhes de implementação das classes pai, o qu
 
 Herança só deve ser utilizada caso as subclasses são uma divisão exata (uma substituição). Exemplo:
 
-![alt text](image.png)
+![alt text](/imgs/image.png)
 \
 Um gato não pode se tornar um cachorro
 
-![alt text](image-1.png)
+![alt text](/imgs/image-1.png)
 \
 Um funcionário pode se tornar um cliente.
 
-### Princípio de Demeter
+### Princípio de Demeter (**D**)
 
 A implementação de um método deve chamar apenas os seguintes outros métodos:
 
@@ -98,6 +98,8 @@ A implementação de um método deve chamar apenas os seguintes outros métodos:
 O exemplo utilizado na aula para representar o uso do princípio, foi o da criação da janela utilizando a biblioteca Swing, onde o construtor Janelinha() atende as definições acima.
 
 
-### Principio de Aberto/Fechado
+### Principio de Aberto/Fechado (**O**)
 
 Uma classe deve estar fechada para modificações e aberta para extensões.
+
+O exemplo utilizado na aula para representar o uso do princípio, foi o da manipulação das propriedades de uma tabela utilizando a biblioteca JFRAME.
