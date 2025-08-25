@@ -133,3 +133,7 @@ Variáveis estáticas, únicas e globais.
 # Aula 8 - 21/08/2025
 
 - Implementação Observer
+
+# Aula 9 - 25/08/2025
+
+- Implementação Observer
