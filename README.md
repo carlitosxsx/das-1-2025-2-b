@@ -116,10 +116,20 @@ Substitui um filho por outro, sem ter perda.
 
 ## DESIGN PATTERNS
 
+[Refactoring Guru] (https://refactoring.guru/pt-br/design-patterns)
+
 Padrões de projeto para desenvolvimento de software, podem ser de criação, estruturais ou comportamentais.
 
 ### Singleton
 
 Padrão de criação que permite garantir que uma classe tenha apenas uma instância, ao mesmo tempo em que fornece um ponto de acesso global a essa instância.
 
-Variáveis estáticas, únicas e globais. 
+Variáveis estáticas, únicas e globais.
+
+# Aula 7 - 18/08/2025
+
+- Implementação Singleton
+
+# Aula 8 - 21/08/2025
+
+- Implementação Observer
