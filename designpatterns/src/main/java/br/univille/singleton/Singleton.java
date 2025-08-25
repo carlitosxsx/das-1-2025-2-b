@@ -3,9 +3,10 @@ package br.univille.singleton;
 public class Singleton {
 
     private static Singleton instance;
+    private String segredo;
 
     private Singleton() {
-        // Construtor privado para evitar instanciamento externo
+        System.out.println("Instancia criada");
     }
 
     public static Singleton getInstance() {
@@ -15,8 +16,11 @@ public class Singleton {
         return instance;
     }
 
-    public void doSomething() {
-        System.out.println("Fazendo algo com a instância singleton.");
+    public String getSegredo() {
+        return segredo;
+    }
+    public void setSegredo(String segredo) {
+        this.segredo = segredo;
     }
 
 }
