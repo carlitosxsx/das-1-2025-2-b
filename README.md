@@ -137,3 +137,36 @@ Variáveis estáticas, únicas e globais.
 # Aula 9 - 25/08/2025
 
 - Implementação Observer
+
+# Aula 10 - 28/08/2025
+
+Estrututa de um projeto de software é composto por características da arquitetura, decisões da arquitetura e princípios de design.
+
+## CARACTERÍSTICAS
+
+Iguais a requisitos não funcionais. Dificilmente há sistemas que implementem um software com todas as características, por isso é importante determinar as mais importantes para o sistema.
+
+- Diponibilidade;
+- Confiabilidade;
+- Testabilidade;
+- Escalabilidade;
+- Segurança;
+- Agilidade;
+- Tolerância a falhas;
+- Elasticidade;
+- Recuperabilidade;
+- Desempenho;
+- Implementabilidade;
+- Capacidade de aprendizadem.
+
+## DECISÕES
+
+Quanto se toma a decisão de qual modelo arquitetural será utilizado no desenvolvimento do projeto, ou seja, essas decisões definem as regras de como um sistema deve ser construído. As decisões da arquitetura formam os limites do sistema e orientam as equipes de desenvolvimento sobre o que é ou não permitido.
+
+## PRINCÍPIOS
+
+> Sempre que possível, utilize a mensageria assincrona entre os serviços para aumentar o desempenho.
+
+- Diretriz a ser seguida.
+
+ Uma decisão (regra) da arquitetura nunca consegue abranger todas as condições e opções para a comunicação entre os serviços, portanto um princípio do design pode ser usado para orientar o método preferido
