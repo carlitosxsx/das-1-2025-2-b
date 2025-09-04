@@ -169,4 +169,42 @@ Quanto se toma a decisão de qual modelo arquitetural será utilizado no desenvo
 
 - Diretriz a ser seguida.
 
- Uma decisão (regra) da arquitetura nunca consegue abranger todas as condições e opções para a comunicação entre os serviços, portanto um princípio do design pode ser usado para orientar o método preferido
+ Uma decisão (regra) da arquitetura nunca consegue abranger todas as condições e opções para a comunicação entre os serviços, portanto um princípio do design pode ser usado para orientar o método preferido.
+
+ # Aula 11 - 01/09/25
+
+- **Expectativas de um arquiteto**
+  - Tomar decisões na aquitetura, manter-se atualizado. 
+  - Tem uma experiência vasta em vários tipos de sistemas
+  - Precisa assegurar a conformidade nas decisões 
+  - Precisa ter um conhecimento na gestão 
+  - Ter habilidades interpessoais
+  - Entender e lidar com questões políticas
+
+- **Decisões de arquitetura**
+  - Arquiteto deve ORIENTAR - Um arquiteto deve orientar, não especificar as escolhas da tecnologia
+  - Conhecimento técnico e amplo e conhecimento do negógio
+
+- **Analisar continuamento a arquitetura**
+  - Um arquiteto deve analisar continuamente a arquitetura e o ambiente de tecnologia atual, para então recomendar soluções de melhorias.
+  - Pensar nas evoluçãoes, não acumular, conecer as tendências
+  - Padronização dos sistema 
+- **Manter-se atualizado**
+- **Domínio do negócio**
+- **DevOps**
+  - Conceito: Entregar valor para o cliente
+  - Planejar- codar - publicar código em um lugar central (precisa de ferramentas) - implantar (publicar para o clinete final) - monitorar - verificar feedback
+  - Controle de conversão 
+  - Continuous integration
+ 
+# Aula 12 - 04/09/25
+
+## Resuma a diferença entre: Arquitetura e Design
+
+Arquitetura: define a estrutura fundamental do sistema, buscando  decisões que conectam os requisitos de negócio com soluções técnicas, servindo como uma ponte entre o dominío do problema e a solução a ser adotada. Essas decisões impactam diretamente na viabilidade, manutenibilidade e evolução do sistema ao longo do tempo.
+
+Design: detalha como cada parte do sistema será implementada, a partir das diretrizes definidas pelos artefatos gerados pelo arquiteto. O design é mais flexível e iterativo, podendo ser ajustado conforme o desenvolvimento avança.
+
+## Como é a formação do conhecimento de um arquiteto modelo T?
+
+A formação de um arquiteto modelo T se dá por meio de uma combinação equilibrada entre amplitude e profundidade de conhecimento. Esse profissional desenvolve uma base sólida em diversas tecnologias, linguagens, padrões e práticas de engenharia de software, o que lhe permite dialogar com diferentes times (principalmente com a equipe de desenvolvimento) e compreender todo o ecossistema técnico. Ao mesmo tempo, ele aprofunda seus conhecimentos em uma ou mais áreas específicas, nas quais atua como especialista técnico.
