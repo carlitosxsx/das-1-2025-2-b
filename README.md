@@ -1,4 +1,4 @@
-# Aula 2 - 31/07/2025
+# Aula 2 - 31/07/25
 
 ## Abstração
 Representar problemas do mundo palpável em programas com o objetivo de reduzir a complexidade no desenvolvimento de software. Ou seja, abstrações mais fieis e completas facilitam a manutenção de projetos de software.
@@ -18,7 +18,7 @@ Ocultar a lógica desenvolvida em uma aplicação transforma as ações que a ap
 ## Encapsulamento
 Pilar da POO que oculta e protege as informações do código, exemplo métodos getter() e setter()
 
-# Aula 3 - 04/08/2025
+# Aula 3 - 04/08/25
 
 > "Maximize a coesão das classes e minimize o acoplamento entre elas."
 
@@ -32,7 +32,7 @@ Toda classe deve ter uma única responsabilidade, ou seja, um código que deve r
 
 Força de conexão entre duas classes. Diz-se uma classe fortemente acoplável aquela que fica "amarrada" a outra, ou seja, remover um simples método de uma classe associada a outra pode gerar erros na outra classe, enquanto uma baixamente acoplável é adaptátvel, como um cabo USB.
 
-# Aula 4 - 07/08/2025
+# Aula 4 - 07/08/25
 
 ## SOLID
 
@@ -61,7 +61,7 @@ No exemplo apresentado em aula, foi desenvolvida uma interface gráfica utilizan
 
 Embora ambas as ações estejam dentro do mesmo contexto visual, a separação das responsabilidades é clara. Cada tipo de evento é tratado por uma interface específica.
 
-# Aula 5 - 11/08/2025
+# Aula 5 - 11/08/25
 
 ### Príncio da Inversão de Dependências (**D**)
 
@@ -97,7 +97,7 @@ A implementação de um método deve chamar apenas os seguintes outros métodos:
 
 O exemplo utilizado na aula para representar o uso do princípio, foi o da criação da janela utilizando a biblioteca Swing, onde o construtor Janelinha() atende as definições acima.
 
-# Aula 6 - 14/08/2025
+# Aula 6 - 14/08/25
 
 ### Principio de Aberto/Fechado (**O**)
 
@@ -126,19 +126,19 @@ Padrão de criação que permite garantir que uma classe tenha apenas uma instâ
 
 Variáveis estáticas, únicas e globais.
 
-# Aula 7 - 18/08/2025
+# Aula 7 - 18/08/25
 
 - Implementação Singleton
 
-# Aula 8 - 21/08/2025
+# Aula 8 - 21/08/25
 
 - Implementação Observer
 
-# Aula 9 - 25/08/2025
+# Aula 9 - 25/08/25
 
 - Implementação Observer
 
-# Aula 10 - 28/08/2025
+# Aula 10 - 28/08/25
 
 Estrututa de um projeto de software é composto por características da arquitetura, decisões da arquitetura e princípios de design.
 
@@ -208,3 +208,26 @@ Design: detalha como cada parte do sistema será implementada, a partir das dire
 ## Como é a formação do conhecimento de um arquiteto modelo T?
 
 A formação de um arquiteto modelo T se dá por meio de uma combinação equilibrada entre amplitude e profundidade de conhecimento. Esse profissional desenvolve uma base sólida em diversas tecnologias, linguagens, padrões e práticas de engenharia de software, o que lhe permite dialogar com diferentes times (principalmente com a equipe de desenvolvimento) e compreender todo o ecossistema técnico. Ao mesmo tempo, ele aprofunda seus conhecimentos em uma ou mais áreas específicas, nas quais atua como especialista técnico.
+
+# Aula 13 - 08/09/25
+
+## Trade-off
+
+### Arquitetura de Tópico
+
+- Se o destinatário inscrito no tópico cair, ele não recebe o tópico. Resalva para algumas arquiteturas de tópico que realizam esse armazenamento;
+- 1 para N;
+- Implementção de um novo "serviço é mais simples, pois não é necessário manutenir nem o tópico e nem o serviço que enviar;
+- A mesma mensagem será enviada para os serviçoes incritos (menor acoplamento)
+
+### Arquitetura de Fila
+
+- O destinatário busca a mensagem que ele quer na fila e depois processa sua cópia (pooling);
+- Por se tratar de uma fila, ela armazena a mensagem caso não seja entregue ao destinatário;
+- Sender (quem envia) e Receiver (quem recebe);
+- 1 para 1;
+- Pode enviar mensagens diferentes para os serviços devido a relação 1 para 1(maior acoplamento)
+
+### Arquitetura FAN-out
+
+![Exemplo de arquitetura FAN-out](/imgs/image-2.png)
