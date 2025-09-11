@@ -231,3 +231,8 @@ A formação de um arquiteto modelo T se dá por meio de uma combinação equili
 ### Arquitetura FAN-out
 
 ![Exemplo de arquitetura FAN-out](/imgs/image-2.png)
+
+# Aula 14 - 11/09/25
+
+- Dependencia azure-messaging-servicebus: Conectar com o service bus no azure
+- Dependencia azure-identity: Autenticador do azure
