@@ -234,5 +234,13 @@ A formação de um arquiteto modelo T se dá por meio de uma combinação equili
 
 # Aula 14 - 11/09/25
 
-- Dependencia azure-messaging-servicebus: Conectar com o service bus no azure
-- Dependencia azure-identity: Autenticador do azure
+- Dependencia azure-messaging-servicebus: Conectar com o service bus no Azure
+- Dependencia azure-identity: Autenticador do Azure
+
+# Aula 15 - 18/09/25
+
+- Implementação Publisher
+
+# Aula 16 - 18/09/25
+
+- Implementação Subscriber
