@@ -97,8 +97,6 @@ A implementação de um método deve chamar apenas os seguintes outros métodos:
 
 O exemplo utilizado na aula para representar o uso do princípio, foi o da criação da janela utilizando a biblioteca Swing, onde o construtor Janelinha() atende as definições acima.
 
-# Aula 6 - 14/08/25
-
 ### Principio de Aberto/Fechado (**O**)
 
 Uma classe deve estar fechada para modificações e aberta para extensões.
@@ -107,6 +105,8 @@ Classe Abstrata: pegar uma classe e misturar com uma interface (meio incompleta)
 Isso significa projetá-la de forma a permitir novas funcionalidades sem alterar seu código, usando recursos como herança, funções lambda e padrões de projeto, garantindo flexibilidade e adaptabilidade.
 
 O exemplo utilizado na aula para representar o uso do princípio, foi o da manipulação das propriedades de uma tabela utilizando a biblioteca JFRAME.
+
+# Aula 6 - 14/08/25
 
 ### Princípio de Substituição de Liskov (**L**)
 
@@ -189,8 +189,15 @@ Quanto se toma a decisão de qual modelo arquitetural será utilizado no desenvo
   - Um arquiteto deve analisar continuamente a arquitetura e o ambiente de tecnologia atual, para então recomendar soluções de melhorias.
   - Pensar nas evoluçãoes, não acumular, conecer as tendências
   - Padronização dos sistema 
+
 - **Manter-se atualizado**
+  - As decisões que um arquiteto toma tendem a ser de longo prazo e difíceis de mudar. 
+  - Entender e seguir as principais tendências contribui para que ele se prepare para o futuro e tome a decisão certa.
+
 - **Domínio do negócio**
+> Um arquiteto deve ter certo nível de especialização no domínio do negócio.
+Sem conhecimento do domínio do negócio, não entende-se o problema comercial, as metas e os requisitos, complicando planejar uma arquitetura eficiente para atender aos requisitos da empresa
+
 - **DevOps**
   - Conceito: Entregar valor para o cliente
   - Planejar- codar - publicar código em um lugar central (precisa de ferramentas) - implantar (publicar para o clinete final) - monitorar - verificar feedback
@@ -244,3 +251,15 @@ A formação de um arquiteto modelo T se dá por meio de uma combinação equili
 # Aula 16 - 18/09/25
 
 - Implementação Subscriber
+
+# Aula 17 - 22/09/25
+
+- Prova
+
+# Aula 18 - 25/09/25
+
+- AWS User Group
+
+# Aula 20 - 29/09/25
+
+- Aula para ajustar o repositório
