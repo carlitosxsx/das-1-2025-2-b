@@ -2,7 +2,14 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Publisher",
+            "name": "Producer",
+            "request": "launch",
+            "mainClass": "br.univille.Publisher",
+            "projectName": "eventos"
+        },
+        {
+            "type": "java",
+            "name": "Consumer",
             "request": "launch",
             "mainClass": "br.univille.Publisher",
             "projectName": "eventos"
