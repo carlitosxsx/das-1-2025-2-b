@@ -263,3 +263,29 @@ A formação de um arquiteto modelo T se dá por meio de uma combinação equili
 # Aula 20 - 29/09/25
 
 - Aula para ajustar o repositório
+
+# Aula 21 - 02/09/25
+
+- Implementação de arquitetura de fila em código
+
+# Aula 22 - 06/10/25
+
+[Capítulo 4] (https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/26[%3Bvnd.vst.idref%3Dcap4.xhtml]!/4/2/68/4/4)
+
+Os requisitos não-funcionais, ou melhor definidos como características da arquitetura, são essenciais porque determinam como o sistema deve se comportar, independentemente de suas funcionalidades específicas.
+
+## Características Operacionais
+
+Dizem respeito a como o sistema se comporta em execução. São exemplos de caractererísticas operacionais:
+
+- Disponibilidade:	Quanto tempo o sistema deve permanecer ativo e disponível (ex: 24/7). É necessário planejar para evitar e recuperar rapidamente de falhas.
+
+- Desempenho:	Envolve testes de estresse, análise de pico, frequência de uso das funções, tempos de resposta etc. Muitas vezes requer um processo demorado e detalhado de validação.
+
+- Escalabilidade: Capacidade de o sistema continuar funcionando adequadamente quando há aumento no número de usuários ou requisições.
+
+## Características Estruturais
+
+Dizem respeito à organização interna do sistema, ou seja, à forma como o código é estruturado, mantido e evoluído
+
+Vale ressaltar que qualquer lista de características da arquitetura será necessariamente incompleta, pois qualquer software pode inventar características importantes com base em fatores únicos.
