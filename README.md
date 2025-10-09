@@ -289,3 +289,21 @@ Dizem respeito a como o sistema se comporta em execução. São exemplos de cara
 Dizem respeito à organização interna do sistema, ou seja, à forma como o código é estruturado, mantido e evoluído
 
 Vale ressaltar que qualquer lista de características da arquitetura será necessariamente incompleta, pois qualquer software pode inventar características importantes com base em fatores únicos.
+
+# Aula 23 - 09/10/25
+
+## Circuit Breaker Patern
+
+Ajuda a lidar com falhas que podem levar vários períodos de tempo para se recuperar quando um aplicativo se conecta a um serviço, bloqueando temporariamente o acesso a um serviço defeituoso depois de detectar falhas. Além disso permite que um aplicativo detecte quando a falha é resolvida.
+
+Objetivo: evitar tentativas malsucedidas repetidas para que o sistema possa se recuperar efetivamente.
+
+A implementação do design pattern funciona como uma máquina de estados que inclui os seguintes estados:
+
+- **Fechado (_Closed_)**: A aplicação está fazendo chamadas para a nossa máquina. Se a chamada não for bem-sucedida, será incrementado na contagem. Se o número de falhas recentes exceder um limite especificado dentro de um determinado período de tempo, máquina será colocado no estado `Aberto` 
+
+- **Aberto (_Open_)**: A cada vez que chega nesse estado, inicia um temporizador com um período de tempo determinado anteriomente. Quando o tempo expirar, a máquina será colocado no estado `Meio Aberto`
+
+- **Meio Aberto (_Half Opened_)**: Um número limitado de solicitações do aplicativo tem permissão para realizar chamadas. Se essas solicitações forem bem-sucedidas, o disjuntor mudará para o estado Fechado. Nesse momento, o cotador de falhas é redefinido e se alguma solicitação falhar, o dijunto retorna para o estado Aberto. 
+
+Observação: o estado meio aberto impede que um serviço de recuperação seja inundado repentinamente com solicitações.
