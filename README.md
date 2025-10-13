@@ -307,3 +307,33 @@ A implementação do design pattern funciona como uma máquina de estados que in
 - **Meio Aberto (_Half Opened_)**: Um número limitado de solicitações do aplicativo tem permissão para realizar chamadas. Se essas solicitações forem bem-sucedidas, o disjuntor mudará para o estado Fechado. Nesse momento, o cotador de falhas é redefinido e se alguma solicitação falhar, o dijunto retorna para o estado Aberto. 
 
 Observação: o estado meio aberto impede que um serviço de recuperação seja inundado repentinamente com solicitações.
+
+# Aula 24 - 13/09/25
+
+## CQRS Pattern
+
+Objetivo: reduzir operações paralelas no mesmo conjunto de dados, que causam o _look contetion_
+
+- Banco primário: receber e ler
+
+- Conectar a aplicação em dois bancos, um deles será responsável apenas por receber operações de leitura (_Query_) e o outro é responsável por realizar por operações de edição (_Command_)
+
+- Há uma sincronia entre esses dois bancos
+
+## Padrões Arquiteturais
+
+### A grande bola de lama
+
+- O código é uma confusão e um espaguete mal estruturado
+
+- Ocasionado por crescimentos desregulados e e reparos rápidos e repetidos
+
+- Diícil de trabalhar
+
+### Arquitetura unitária
+
+![Exemplo de arquitetura unitária](/imgs/image-3.png)
+
+### Cliente/Servidor
+
+![Exemplo de arquitetura cliente/servidor](/imgs/image-4.png)
