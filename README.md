@@ -332,8 +332,55 @@ Objetivo: reduzir operações paralelas no mesmo conjunto de dados, que causam o
 
 ### Arquitetura unitária
 
+- Sistema único sem separação clara entre componentes
+
+- Hoje é raro encontrar arquiteturas unitárias fora de ambientes restritos, pois sistemas tendem a se dividir para preservar características operacionais
+
 ![Exemplo de arquitetura unitária](/imgs/image-3.png)
 
 ### Cliente/Servidor
 
+- Separa o sistema em front-end e back-end
+
+- Diversas variações conforme as capacidades e necessidades tecnológicas evoluíram
+
+- Base para muitos outros estilos arquiteturais focados em particionamento eficiente dos sistemas
+
 ![Exemplo de arquitetura cliente/servidor](/imgs/image-4.png)
+
+# Aula 25 - 16/09/25
+
+## Retry Pattern
+
+O Retry Pattern é um padrão de arquitetura utilizado para aumentar a resiliência de sistemas distribuídos e aplicações, principalmente em situações onde falhas temporárias (como problemas de rede, tempo limite de resposta, ou indisponibilidade momentânea de serviços) podem ocorrer.
+
+O padrão consiste em tentar novamente uma operação que falhou, repetindo a ação várias vezes antes de falhar definitivamente. Essas tentativas geralmente são acompanhadas por:
+
+- Intervalos entre tentativas: Pode ser fixo ou crescente (exponencial backoff), evitando sobrecarregar o sistema.
+- Número máximo de tentativas: Limita o número de retries para evitar loops infinitos.
+- Tratamento de falhas específicas: Apenas erros transitórios são alvo do retry, enquanto falhas permanentes são imediatamente reportadas.
+
+# Aula 26 - 20/09/25
+
+## Arquitetura em Camadas (N-tier)
+
+Estilo comum, simples, barato e natural para equipes organizadas por funções (UI, negócio, banco). Usada frequentemente como ponto de partida em projetos.
+
+## Estrutura
+
+Quatro camadas típicas: apresentação, negócio, persistência e banco de dados. Camadas podem ser combinadas ou separadas conforme o tamanho da aplicação.
+
+## Isolamento
+
+Camadas fechadas comunicam-se apenas com a adjacente, garantindo baixo acoplamento e facilitando mudanças isoladas. Camadas abertas aumentam o acoplamento e fragilidade.
+
+## Limitações
+
+Bom para sistemas pequenos e com requisitos pouco claros. Apresenta baixo desempenho, escalabilidade limitada e difícil manutenção em sistemas maiores. Propenso ao antipadrão “sinkhole”, onde camadas apenas repassam dados sem lógica.
+
+## Classificação
+
+- Fácil e barato de implementar.
+- Baixa testabilidade e implementabilidade.
+- Confiabilidade média.
+- Escalabilidade e tolerância a falhas muito baixas.
