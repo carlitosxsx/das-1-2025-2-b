@@ -308,7 +308,7 @@ A implementação do design pattern funciona como uma máquina de estados que in
 
 Observação: o estado meio aberto impede que um serviço de recuperação seja inundado repentinamente com solicitações.
 
-# Aula 24 - 13/09/25
+# Aula 24 - 13/10/25
 
 ## CQRS Pattern
 
@@ -348,7 +348,7 @@ Objetivo: reduzir operações paralelas no mesmo conjunto de dados, que causam o
 
 ![Exemplo de arquitetura cliente/servidor](/imgs/image-4.png)
 
-# Aula 25 - 16/09/25
+# Aula 25 - 16/10/25
 
 ## Retry Pattern
 
@@ -360,7 +360,7 @@ O padrão consiste em tentar novamente uma operação que falhou, repetindo a a�
 - Número máximo de tentativas: Limita o número de retries para evitar loops infinitos.
 - Tratamento de falhas específicas: Apenas erros transitórios são alvo do retry, enquanto falhas permanentes são imediatamente reportadas.
 
-# Aula 26 - 20/09/25
+# Aula 26 - 20/10/25 e Aula 27/10
 
 ## Arquitetura em Camadas (N-tier)
 
@@ -384,3 +384,11 @@ Bom para sistemas pequenos e com requisitos pouco claros. Apresenta baixo desemp
 - Baixa testabilidade e implementabilidade.
 - Confiabilidade média.
 - Escalabilidade e tolerância a falhas muito baixas.
+
+# Aula 28 - 27/10/25
+
+`ps ax` -> comandos do linux que mostra os programas em execução
+`tail` -> mostra as 10 ultimas linhas. Exemplo de uso: `ps ax | tail`
+`grap` -> filtra pelas linhas que tem "java". Exemplo de uso: `ps ax | grap -i java | tail` 
+`curl` -> faz buscas na internet e retorna o código fonte da página. Exemplo de uso: `curl https://www.univille.br`
+`wget` -> baixa o código fonte de uma página web. Exemplo de uso: `wget https://www.univille.br`
