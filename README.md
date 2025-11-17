@@ -360,7 +360,7 @@ O padrão consiste em tentar novamente uma operação que falhou, repetindo a a�
 - Número máximo de tentativas: Limita o número de retries para evitar loops infinitos.
 - Tratamento de falhas específicas: Apenas erros transitórios são alvo do retry, enquanto falhas permanentes são imediatamente reportadas.
 
-# Aula 26 - 20/10/25 e Aula 27 23/10/25
+# Aula 26 - 20/10/25 e Aula 27 - 23/10/25
 
 ## Arquitetura em Camadas (N-tier)
 
@@ -395,11 +395,12 @@ Bom para sistemas pequenos e com requisitos pouco claros. Apresenta baixo desemp
 `curl` -> faz buscas na internet e retorna o código fonte da página. Exemplo de uso: `curl https://www.univille.br`
 `wget` -> baixa o código fonte de uma página web. Exemplo de uso: `wget https://www.univille.br`
 
-# Aula 29 - 30/10/25
+# Aula 29 - 30/10/25 e Aula 30 - 03/11/25
 
 ## Arquitetura Microkernel (ou Arquitetura de Plug-in)
 
 ### Conceito
+
 A arquitetura microkernel é um estilo arquitetural que separa o sistema em duas partes principais:
 Sistema Central (core): contém apenas a funcionalidade mínima necessária para o funcionamento do sistema.
 Componentes de Plug-in: módulos independentes e autônomos que adicionam ou estendem funcionalidades específicas.
@@ -417,11 +418,11 @@ Pode ser implementado como:
 Exemplo:
 No processamento de pagamentos, o sistema central define o fluxo de pagamento, e cada método de pagamento (cartão, PayPal, vale, etc.) é um plug-in separado.
 
-Componentes de Plug-in
+### Componentes de Plug-in
 
-São autônomos, independentes e especializados.
-Contêm lógicas específicas que ampliam ou personalizam o sistema.
-O ideal é que não tenham dependência entre si.
+- São autônomos, independentes e especializados.
+- Contêm lógicas específicas que ampliam ou personalizam o sistema.
+- O ideal é que não tenham dependência entre si.
 
 Podem ser:
 
@@ -434,37 +435,35 @@ Formas de implementação:
 - Como pacotes ou namespaces dentro do mesmo projeto;
 - Como serviços remotos (REST ou mensageria), o que torna a arquitetura distribuída, mas mais complexa.
 
-Registro de Plug-ins
+### Registro de Plug-ins
 
-O sistema central precisa saber quais plug-ins existem e como acessá-los.
-Isso é feito por meio de um registro, que pode ser:
+O sistema central precisa saber quais plug-ins existem e como acessá-los. Isso é feito por meio de um registro, que pode ser:
 
-Uma estrutura simples (ex: Map interno com nome e referência do plug-in);
-
-Ou um sistema de registro mais complexo (ex: ZooKeeper, Consul).
+- Uma estrutura simples (ex: Map interno com nome e referência do plug-in);
+- Ou um sistema de registro mais complexo (ex: ZooKeeper, Consul).
 
 Cada registro inclui informações como:
 
-Nome do plug-in;
+- Nome do plug-in;
+- Contrato de dados (entrada e saída);
+- Protocolo de comunicação (local, REST, mensageria).
 
-Contrato de dados (entrada e saída);
-
-Protocolo de comunicação (local, REST, mensageria).
-
-Contratos
+### Contratos
 
 Os contratos definem como o sistema central e os plug-ins se comunicam, especificando:
 
-Métodos obrigatórios (ex: register(), assess(), deregister());
+- Métodos obrigatórios (ex: register(), assess(), deregister());
+- Formato dos dados de entrada e saída (XML, JSON ou objetos).
+- Quando há plug-ins de terceiros, podem ser criados adaptadores para alinhar o contrato padrão do sistema com o contrato externo.
 
-Formato dos dados de entrada e saída (XML, JSON ou objetos).
+### Casos de Uso
 
-Quando há plug-ins de terceiros, podem ser criados adaptadores para alinhar o contrato padrão do sistema com o contrato externo.
+- Eclipse: o sistema central é o editor básico; as funcionalidades são adicionadas por plug-ins.
+- Jenkins / Jira / Chrome: novos recursos são adicionados como extensões.
+- Aplicações corporativas: como sistemas de seguros ou impostos, onde regras específicas de cada jurisdição ou legislação são isoladas em plug-ins independentes, permitindo fácil atualização sem afetar o sistema base.
 
-Casos de Uso
+# Aula 31 - 06/11/25
 
-Eclipse: o sistema central é o editor básico; as funcionalidades são adicionadas por plug-ins.
+Implementação da Arquitetura Microkernel
 
-Jenkins / Jira / Chrome: novos recursos são adicionados como extensões.
-
-Aplicações corporativas: como sistemas de seguros ou impostos, onde regras específicas de cada jurisdição ou legislação são isoladas em plug-ins independentes, permitindo fácil atualização sem afetar o sistema base.
+# Aula 31 - 10/10/25

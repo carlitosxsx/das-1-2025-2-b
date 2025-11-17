@@ -2,6 +2,7 @@ package br.univille.app_a.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,12 +19,26 @@ public class HomeController {
         
         try(DaprClient client = new DaprClientBuilder().build()){
             var msg = "Olá! by App A";
-            client.invokeMethod("app-b", "api/v1/startBSync", msg, HttpExtension.POST);
-        } catch (Exception e){
+            client.invokeMethod("app-b", "api/v1/startBSync", msg, HttpExtension.POST).block();
+        } catch (Exception e){ 
 
         }
         
         return ResponseEntity.ok().build();
+    }
+
+  @PostMapping("/pub")
+    public ResponseEntity startAASync() {
+        System.out.println("App A started");
+        try(DaprClient daprClient = new DaprClientBuilder().build()){
+            var message = "Hello from App A";
+            daprClient.publishEvent("pubsub-dapr", "topicodapr", message).block();
+
+        }catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+            return ResponseEntity.status(500).body("Error starting App A");
+        }
+        return ResponseEntity.ok().body("App A started");
     }
 
 }
